@@ -24,6 +24,7 @@ var item = $("#item").val('');//empty the input element after submiting the data
 var itemdes = $("#itemdes").val('');//empty the input element after submiting the data
 var itemimg = $("#itemimg").val('');//empty the input element after submiting the data
     console.log(data);
+alert("you successfully added a product , and sent an email");
 }
 });
 }
@@ -55,26 +56,24 @@ $(".additem").click(function(){
     setInterval(retrievedata, 1000);//this function running the function of the retreival of data every certain amount of time
    
     //this code creates the datatable and it's attached by the table with it's id
-  $('#memListTable').DataTable({
+  var table = $('#memListTable').DataTable({
         "processing": true,
         "serverSide": true,
-        "paging": true,
-        "searching": true,
-        "retrieve": true,
         "ajax": {
-            "url": "datatable.php",
-            "dataSrc": ""
-            
+            "url": "datatable.php"
                 },
       "columns" : [ //here we define  the columns of the data table and we should associata the data with real name of the columns in the database
           {"data":"id"},
           {"data":"itemname"},
           {"data":"description"},
-          {"data":"image"},
-      ]
+          {render: function(data) {
+        return '<img style="width: 50px;height: 50px;margin: auto;border-radius: 10%;" src="images/'+data+'">'}
+          }]
     });     
    
-   
+   setInterval( function () {
+    table.ajax.reload();
+}, 30000 );
  
 });
 

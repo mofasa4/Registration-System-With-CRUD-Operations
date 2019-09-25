@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+use PHPMailer\PHPMailer\PHPMailer;
+
 if (isset($_SESSION['name'])) {
 
 ?>
@@ -94,8 +96,8 @@ if (isset($_SESSION['name'])) {
                                             <button type="button" id="submit" class="btnSubmit">submit</button>
                                         </div>
                         		</div>
-                                <div class="col-md-8 admin">
-                                    <table id="memListTable" class="display dataTable" style="width:100%">
+                                <div class="col-md-12 admin">
+                                    <table id="memListTable" class="display" style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th>id</th>
@@ -128,15 +130,48 @@ if (isset($_SESSION['name'])) {
 											echo 'failed ' . $e->getMessage();
 										}
 										if(@$_POST['itemspec'] == 'specs' ){
+                                          
 											@$itemname = $_POST['item'];
 											@$description = $_POST['itemdes'];
 											@$image =$_POST['itemimg'];
-											$stmt = "INSERT INTO `items` (`id`, `itemname`, `description`, `image`) 
+                                            $stmt = "INSERT INTO `items` (`id`, `itemname`, `description`, `image`) 
 											VALUES (NULL, '$itemname', '$description', '$image');";
 											 $con->exec("$stmt");
+//                                            require_once "PHPMailer/PHPMailer.php";
+//                                            require_once "PHPMailer/Exception.php";
+//                                            require_once "PHPMailer/SMTP.php";
+//                                            
+//                                            $mail = new PHPMailer();
+//                                            
+////                                            smtp settings
+//                                            $mail->isSMTP();   
+////                                            $mail->SMTPDebug = 2;
+//                                            $mail->Host = "smtp.gmail.com";
+//                                            $mail->SMTPAuth = true;
+//                                            $mail->Username = "moh.f.saleh4@gmail.com";                 
+//                                            $mail->Password = "hehew345";
+//                                            $mail->Port = 465; //465
+//                                            $mail->SMTPSecure = "ssl";//ssl
+//                                            
+////                                            Email Settings
+//                                            $mail->isHTML(true);
+//                                            $mail->setFrom("momo@gmail.com","momo");
+//                                            $mail->addAddress("moh.f.saleh4@gmail.com");
+//                                            $mail->Subject = $itemname;
+//                                            $mail->Body = $description;
+//                                            if(!$mail->send()) 
+//                                            {
+//                                                echo "Mailer Error: " . $mail->ErrorInfo;
+//                                            } 
+//                                            else 
+//                                            {
+//                                                echo "Message has been sent successfully";
+//                                            }
+//                                            
+											
+                                              
+                                             
 										}
-
-										
 
 
 										?>
