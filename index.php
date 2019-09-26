@@ -149,7 +149,7 @@ if (isset($_SESSION['name'])) {
 //                                            $mail->Host = "smtp.gmail.com";
 //                                            $mail->SMTPAuth = true;
 //                                            $mail->Username = "moh.f.saleh4@gmail.com";                 
-//                                            $mail->Password = "hehew345";
+//                                            $mail->Password = "";
 //                                            $mail->Port = 465; //465
 //                                            $mail->SMTPSecure = "ssl";//ssl
 //                                            
