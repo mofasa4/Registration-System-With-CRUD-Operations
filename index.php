@@ -148,7 +148,7 @@ if (isset($_SESSION['name'])) {
 ////                                            $mail->SMTPDebug = 2;
 //                                            $mail->Host = "smtp.gmail.com";
 //                                            $mail->SMTPAuth = true;
-//                                            $mail->Username = "moh.f.saleh4@gmail.com";                 
+//                                            $mail->Username = "";                 
 //                                            $mail->Password = "";
 //                                            $mail->Port = 465; //465
 //                                            $mail->SMTPSecure = "ssl";//ssl
@@ -156,7 +156,7 @@ if (isset($_SESSION['name'])) {
 ////                                            Email Settings
 //                                            $mail->isHTML(true);
 //                                            $mail->setFrom("momo@gmail.com","momo");
-//                                            $mail->addAddress("moh.f.saleh4@gmail.com");
+//                                            $mail->addAddress("");
 //                                            $mail->Subject = $itemname;
 //                                            $mail->Body = $description;
 //                                            if(!$mail->send()) 
