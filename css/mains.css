@@ -1,9 +1,9 @@
-.admin{
+.admin {
   padding: 5%;
-    border: 1px solid #ced4da;
-    margin-bottom: 2%;
-    text-align: center;
-    color:firebrick;
+  border: 1px solid #ced4da;
+  margin-bottom: 2%;
+  text-align: center;
+  color: firebrick;
 
 }
 
@@ -17,35 +17,36 @@
 
 
 
-.form-content .productname{
-background: linear-gradient(to right, #ed239f 0%, #1345e6 20%, #ed239f 40%, #1345e6 60%, #ed239f 80%, #1345e6 100%);
+.form-content .productname {
+  background: linear-gradient(to right, #ed239f 0%, #1345e6 20%, #ed239f 40%, #1345e6 60%, #ed239f 80%, #1345e6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-text-align: center;
-padding: 20px;
+  text-align: center;
+  padding: 20px;
 
-    font-size: 40px;
+  font-size: 40px;
   font-weight: 600;
 
-    
+
 }
-.form-content .productdescription{
-text-align: center;
-padding: 5px;
-margin: 5px;
-height: 10%;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 30px;
-    background: linear-gradient(to left, red 0%, yellow 20%, green 40%, blue 60%, brown 80%, gold 100%);
+
+.form-content .productdescription {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  height: 10%;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  background: linear-gradient(to left, red 0%, yellow 20%, green 40%, blue 60%, brown 80%, gold 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.form-content .productimg{
-width: 300px;
-height: 300px;
-margin: auto;
-border-radius: 10%;
-}
 
+.form-content .productimg {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border-radius: 10%;
+}

@@ -17,8 +17,6 @@
 
 		$con = new PDO($dsn, $user, $password, $options); // Connection code
 		$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
 	}
 
 	catch(PDOException $e){
@@ -50,8 +48,6 @@
 		}
 
 	}
-
-
 	if (@$_POST['login'] == 'login') {
 		
 		$name1 = $_POST['name1'];

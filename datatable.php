@@ -1,6 +1,5 @@
 <?php
 
-
 $dsn = 'mysql:host=localhost; dbname=task12'; // dsn = data source name ----- dbname = database name
 	$user = 'root';
 	$password = '';
@@ -99,8 +98,6 @@ $dsn = 'mysql:host=localhost; dbname=task12'; // dsn = data source name ----- db
 //echo json_encode($response);
 //	
 
-
-
 $params = $columns = $totalRecords = $data = array();
  
 	$params = $_REQUEST;
@@ -155,17 +152,5 @@ $params = $columns = $totalRecords = $data = array();
 	);
  
 	echo json_encode($json_data);
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
